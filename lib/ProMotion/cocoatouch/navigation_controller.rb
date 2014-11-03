@@ -11,7 +11,11 @@ module ProMotion
     end
 
     def supportedInterfaceOrientations
-      visibleViewController.supportedInterfaceOrientations if visibleViewController
+      if visibleViewController
+        visibleViewController.supportedInterfaceOrientations
+      else
+        UIInterfaceOrientationMaskAll
+      end
     end
 
     def preferredInterfaceOrientationForPresentation
