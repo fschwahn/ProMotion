@@ -7,15 +7,15 @@ module ProMotion
     end
 
     def shouldAutorotate
-      visibleViewController.shouldAutorotate
+      visibleViewController.shouldAutorotate if visibleViewController
     end
 
     def supportedInterfaceOrientations
-      visibleViewController.supportedInterfaceOrientations
+      visibleViewController.supportedInterfaceOrientations if visibleViewController
     end
 
     def preferredInterfaceOrientationForPresentation
-      visibleViewController.preferredInterfaceOrientationForPresentation
+      visibleViewController.preferredInterfaceOrientationForPresentation if visibleViewController
     end
 
   end
