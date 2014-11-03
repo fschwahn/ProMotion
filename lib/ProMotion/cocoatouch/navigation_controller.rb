@@ -7,7 +7,11 @@ module ProMotion
     end
 
     def shouldAutorotate
-      visibleViewController.shouldAutorotate if visibleViewController
+      if visibleViewController
+        visibleViewController.shouldAutorotate
+      else
+        true
+      end
     end
 
     def supportedInterfaceOrientations
